@@ -104,8 +104,36 @@ window.addEventListener('keydown',(e)=>{
         e.key==='8'||
         e.key==='9'||
         e.key==='.'||
-    ){
+){
         clickButton(e.key);
-    }
-    }
-})
+}else if{
+    e.key === '+'||
+    e.key === '-'||
+    e.key === '%'
+}{
+    clickOperation(e.key);
+}else if(e.key==='*'){
+    clickOperation('X');
+}else if(e.key=='enter'|| e.key==='='){
+    clickEqual();
+}
+});
+
+function clickButton(key){
+    numbers.forEach(button =>{
+        if(button.innerText===key){
+            button.click();
+        }
+    })
+}
+
+function clickOperation(key){
+    operation.forEach(button=>{
+        if(button.innerText===key){
+            button.click();
+    })
+}
+
+function clickEqual(){
+    equal.click();
+}
