@@ -103,14 +103,13 @@ window.addEventListener('keydown',(e)=>{
         e.key==='7'||
         e.key==='8'||
         e.key==='9'||
-        e.key==='.'||
-){
-        clickButton(e.key);
-}else if{
+        e.key==='.'
+     ){clickButton(e.key);
+    }else if(
     e.key === '+'||
     e.key === '-'||
     e.key === '%'
-}{
+    ){
     clickOperation(e.key);
 }else if(e.key==='*'){
     clickOperation('X');
@@ -131,7 +130,7 @@ function clickOperation(key){
     operation.forEach(button=>{
         if(button.innerText===key){
             button.click();
-    })
+    }})
 }
 
 function clickEqual(){
