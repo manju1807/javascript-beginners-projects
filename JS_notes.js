@@ -602,4 +602,275 @@ Today, JavaScript is ubiquitous and is running in browsers, on servers, actually
 
         
 
-                //lesson:8  
+                //lesson:8  objects 
+/*
+JavaScript Object 
+
+Object literals and the dot notation
+One of the most common ways of building an object in JavaScript is using the object literal syntax: {}
+
+examples:
+
+var user = {}; // creates an javascript object.
+
+Now an object literal is assigned to the variable user, which means that the object it is bound to can be extended and manipulated in a myriad of ways.
+Sometimes, an entire object can be immediately built, using the object literal syntax, by specifying the object's properties, delimited as key-value pairs, using syntax that was already covered in an earlier lesson item in this lesson.
+Here's one such previously built object:
+
+//creating an object with properties and their values
+var assistantManager = {
+    rangeTilesPerTurn: 3,
+    socialSkills: 30,
+    streetSmarts: 30,
+    health: 40,
+    specialAbility: "young and ambitious",
+    greeting: "Let's make some money"
+}
+
+//accessing the properties of the object
+console.log(assistantManager.socialSkills); // sol: 30
+console.log(assistantManager.greeting); // sol: Let's make some money
+
+//changing the value of the properties of the object
+
+assistantManager.socialSkills = 40;
+assistantManager.greeting = "Let's make some money and have fun";
+
+console.log(assistantManager.socialSkills); // sol: 40
+console.log(assistantManager.greeting); // sol: Let's make some money and have fun
+
+//adding new properties to the object
+
+assistantManager.age = 25;
+assistantManager.name = "John";
+
+console.log(assistantManager.age); // sol: 25
+console.log(assistantManager.name); // sol: John
+
+//deleting the properties of the object
+
+delete assistantManager.socialSkills;
+delete assistantManager.streetSmarts;
+
+console.log(assistantManager.socialSkills); // sol: undefined
+console.log(assistantManager.streetSmarts); // sol: undefined
+
+//accessing the properties of the object using the dot notation
+
+console.log(assistantManager.socialSkills); // sol: 40
+console.log(assistantManager.greeting); // sol: Let's make some money and have fun
+
+//accessing the properties of the object using the bracket notation
+
+console.log(assistantManager["socialSkills"]); // sol: 40
+console.log(assistantManager["greeting"]); // sol: Let's make some money and have fun
+
+//accessing the properties of the object using the bracket notation and the variable
+
+var property = "socialSkills";
+console.log(assistantManager[property]); // sol: 40
+
+//accessing the properties of the object using the bracket notation and the variable
+
+var property = "greeting";
+console.log(assistantManager[property]); // sol: Let's make some money and have fun
+
+//accessing the properties of the object using the bracket notation and the variable
+
+var property = "age";
+
+console.log(assistantManager[property]); // sol: 25
+
+//accessing the properties of the object using the bracket notation and the variable
+
+var property = "name";
+
+console.log(assistantManager[property]); // sol: John
+*/
+
+
+                //lesson:9  maths object
+/*
+Math object cheat sheet
+
+JavaScript has handy built-in objects. One of these popular built-in objects is the Math object.
+
+By the end of this reading, you'll be able to:
+
+    Outline the built-in properties and methods of the Math object
+
+Number constants
+
+Here are some of the built-in number constants that exist on the Math object: 
+
+    The PI number: Math.PI which is approximately 3.14159
+    The Euler's constant: Math.E which is approximately 2.718
+    The natural logarithm of 2: Math.LN2 which is approximately 0.693
+
+Rounding methods
+
+These include: 
+
+     Math.ceil() - rounds up to the closest integer 
+     Math.floor() - rounds down to the closest integer 
+     Math.round() - rounds up to the closest integer if the decimal is .5 or above; otherwise, rounds down to the closest integer 
+     Math.trunc() - trims the decimal, leaving only the integer
+
+Arithmetic and calculus methods
+
+Here is a non-conclusive list of some common arithmetic and calculus methods that exist on the Math object: 
+
+    Math.pow(2,3) - calculates the number 2 to the power of 3, the result is 8 
+    Math.sqrt(16) - calculates the square root of 16, the result is 4 
+    Math.cbrt(8) - finds the cube root of 8, the result is 2 
+    Math.abs(-10) - returns the absolute value, the result is 10 
+    Logarithmic methods: Math.log(), Math.log2(), Math.log10() 
+    Return the minimum and maximum values of all the inputs: Math.min(9,8,7) returns 7, Math.max(9,8,7) returns 9.
+     Trigonometric methods: Math.sin(), Math.cos(), Math.tan(), etc.
+*/
+
+                //lesson:10  string object
+
+/*
+String object cheat sheet
+
+JavaScript has handy built-in objects. One of these popular built-in objects is the String object.
+
+By the end of this reading, you'll be able to:
+
+Outline the built-in properties and methods of the String object
+String properties
+
+Here are some of the built-in string properties that exist on the String object:
+
+    String.length - returns the length of the string
+    String.prototype - returns the prototype of the string object
+
+String methods
+
+Here are some of the built-in string methods that exist on the String object:
+
+    String.fromCharCode() - returns a string created by using the specified sequence of Unicode values
+    String.fromCodePoint() - returns a string created by using the specified sequence of code points
+    String.prototype.charAt() - returns the specified character from a string
+    String.prototype.charCodeAt() - returns the Unicode of the character at the specified index in a string
+    String.prototype.concat() - joins two or more strings, and returns a new joined strings
+    String.prototype.includes() - determines whether one string may be found within another string, returning true or false as appropriate
+    String.prototype.indexOf() - returns the index within the calling String object of the first occurrence of the specified value, or -1 if not found
+    String.prototype.lastIndexOf() - returns the index within the calling String object of the last occurrence of the specified value, or -1 if not found
+    String.prototype.repeat() - constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together
+    String.prototype.replace() - returns a new string with some or all matches of a pattern replaced by a replacement
+    String.prototype.search() - executes the search for a match between a regular expression and this String object
+    String.prototype.slice() - extracts a section of a string and returns it as a new string, without modifying the original string
+    String.prototype.split() - splits a String object into an array of strings by separating the string into substrings
+    String.prototype.substring() - returns the part of the string between the start and end indexes, or to the end of the string
+    String.prototype.toLowerCase() - returns the calling string value converted to lower case
+    String.prototype.toUpperCase() - returns the calling string value converted to upper case
+    String.prototype.trim() - removes whitespace from both ends of a string
+    String.prototype.valueOf() - returns the primitive value of a String object
+*/
+
+                //lesson:11  Error Handling
+
+/*
+Error handling cheat sheet
+
+JavaScript has handy built-in objects. One of these popular built-in objects is the Error object.
+
+By the end of this reading, you'll be able to:
+
+    Outline the built-in properties and methods of the Error object
+    Use the Error object to handle errors
+
+Error object
+
+The Error object is a built-in object that provides error information when an error occurs.
+
+Here are some of the built-in properties and methods that exist on the Error object:
+
+    Error.name - returns the name of the error
+    Error.message - returns the error message
+    Error.stack - returns the stack trace of the error
+    Error.prototype.toString() - returns a string representing the specified object
+
+Error handling
+
+Error handling is a process that deals with errors in a manageable and predictable manner.
+
+Here are some of the common error handling techniques:
+
+    Try...catch...finally - the try statement lets you test a block of code for errors. The catch statement lets you handle the error. The finally statement lets you execute code, after try and catch, regardless of the result.
+    Throw - the throw statement allows you to create custom errors.
+    Try...catch - the try statement lets you test a block of code for errors. The catch statement lets you handle the error.
+    Try...finally - the try statement lets you test a block of code for errors. The finally statement lets you execute code, after try, regardless of the result.
+*/
+
+                //lesson:12  Date object
+
+/*
+Date object cheat sheet
+
+JavaScript has handy built-in objects. One of these popular built-in objects is the Date object.
+
+By the end of this reading, you'll be able to:
+
+    Outline the built-in properties and methods of the Date object
+    Use the Date object to work with dates and times
+
+Date object
+
+The Date object is a built-in object that provides methods for working with dates and times.
+
+Here are some of the built-in properties and methods that exist on the Date object:
+
+    Date.now() - returns the number of milliseconds since January 1, 1970, 00:00:00 UTC
+    Date.parse() - parses a string representation of a date, and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC
+    Date.UTC() - accepts the same parameters as the longest form of the constructor, and returns the number of milliseconds in a Date object since January 1, 1970, 00:00:00 UTC
+    Date.prototype.getDate() - returns the day of the month for the specified date according to local time
+    Date.prototype.getDay() - returns the day of the week for the specified date according to local time, where 0 represents Sunday
+    Date.prototype.getFullYear() - returns the year of the specified date according to local time
+    Date.prototype.getHours() - returns the hour for the specified date, according to local time
+    Date.prototype.getMilliseconds() - returns the milliseconds in the specified date according to local time
+    Date.prototype.getMinutes() - returns the minutes in the specified date according to local time
+    Date.prototype.getMonth() - returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year)
+    Date.prototype.getSeconds() - returns the seconds in the specified date according to local time
+    Date.prototype.getTime() - returns the numeric value corresponding to the time for the specified date according to universal time
+    Date.prototype.getTimezoneOffset() - returns the time-zone offset from UTC, in minutes, for the current locale
+    Date.prototype.getUTCDate() - returns the day (date) of the month in the specified date according to universal time
+    Date.prototype.getUTCDay() - returns the day of the week in the specified date according to universal time, where 0 represents Sunday
+    Date.prototype.getUTCFullYear() - returns the year in the specified date according to universal time
+    Date.prototype.getUTCHours() - returns the hours in the specified date according to universal time
+    Date.prototype.getUTCMilliseconds() - returns the milliseconds in the specified date according to universal time
+    Date.prototype.getUTCMinutes() - returns the minutes in the specified date according to universal time
+    Date.prototype.getUTCMonth() - returns the month of the specified date according to universal time, as a zero-based value (where zero indicates the first month of the year)
+    Date.prototype.getUTCSeconds() - returns the seconds in the specified date according to universal time
+    Date.prototype.setDate() - sets the day of the month for a specified date according to local time
+    Date.prototype.setFullYear() - sets the full year for a specified date according to local time
+    Date.prototype.setHours() - sets the hours for a specified date according to local time
+    Date.prototype.setMilliseconds() - sets the milliseconds for a specified date according to local time
+    Date.prototype.setMinutes() - sets the minutes for a specified date according to local time
+    Date.prototype.setMonth() - sets the month for a specified date according to local time
+    Date.prototype.setSeconds() - sets the seconds for a specified date according to local time
+    Date.prototype.setTime() - sets the date and time value in the Date object
+    Date.prototype.setUTCDate() - sets the day of the month for a specified date according to universal time
+    Date.prototype.setUTCFullYear() - sets the full year for a specified date according to universal time
+    Date.prototype.setUTCHours() - sets the hours value in the Date object using universal time
+    Date.prototype.setUTCMilliseconds() - sets the milliseconds value in the Date object using universal time
+    Date.prototype.setUTCMinutes() - sets the minutes value in the Date object using universal time
+    Date.prototype.setUTCMonth() - sets the month value in the Date object using universal time
+    Date.prototype.setUTCSeconds() - sets the seconds value in the Date object using universal time
+    Date.prototype.toDateString() - converts the date portion of a Date object into a readable string
+    Date.prototype.toISOString() - returns a string in simplified extended ISO format (ISO 8601)
+    Date.prototype.toJSON() - returns a string representation of the Date object
+    Date.prototype.toLocaleDateString() - returns a string with a language sensitive representation of the date portion of this date
+    Date.prototype.toLocaleString() - returns a string with a language sensitive representation of this date
+    Date.prototype.toLocaleTimeString() - returns a string with a language sensitive representation of the time portion of this date
+    Date.prototype.toString() - converts a Date object to a string
+    Date.prototype.toTimeString() - converts the time portion of a Date object to a string
+    Date.prototype.toUTCString() - converts a Date object to a string, using the UTC time zone
+    Date.prototype.valueOf() - returns the primitive value of a Date object
+
+
+
+
+    
